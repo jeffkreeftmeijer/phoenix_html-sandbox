@@ -7,7 +7,7 @@ defmodule Sandbox.PageController do
   end
 
   def form(conn, params) do
-    changeset = User.changeset(%User{})
+    changeset = User.changeset(%User{}, params["user"])
     render conn, "form.html", changeset: changeset, params: params
   end
 end

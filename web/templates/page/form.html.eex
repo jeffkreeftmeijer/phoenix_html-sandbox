@@ -22,4 +22,19 @@
       <%= submit "Search" %>
     <% end %>
   </li>
+
+  <li>
+    This is a new user form. Users embed a permalink, so the form uses
+    `inputs_for` to set the permalink's url.
+
+    <%= form_for @changeset, "/form", fn f -> %>
+      <label>Name <%= text_input f, :name %></label>
+
+      <%= inputs_for f, :permalink, fn fp -> %>
+        <label>Permalink url <%= text_input fp, :url %></label>
+      <% end %>
+
+      <%= submit "Create user" %>
+    <% end %>
+  </li>
 </ol>
