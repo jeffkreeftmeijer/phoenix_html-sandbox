@@ -1,0 +1,17 @@
+<h1>
+  <%= link to: "http://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html" do %>
+    Phoenix.HTML.Form
+  <% end %>
+</h1>
+
+<ol>
+  <li>
+    This is a search form that uses a `Plug.Conn` (`@conn`) as the first
+    argument, using the connection data to populate the form's fields.
+
+    <%= form_for @conn, "/form", [name: :search], fn f -> %>
+      <%= text_input f, :for %>
+      <%= submit "Search" %>
+    <% end %>
+  </li>
+</ol>

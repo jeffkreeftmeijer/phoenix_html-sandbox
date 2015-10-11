@@ -17,6 +17,9 @@ defmodule Sandbox.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+    get "/form", PageController, :form
+    post "/form", PageController, :form
   end
 
   # Other scopes may use custom stacks.
