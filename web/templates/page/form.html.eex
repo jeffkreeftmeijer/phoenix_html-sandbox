@@ -4,6 +4,14 @@
   <% end %>
 </h1>
 
+<h2>Parameters</h2>
+<code>
+  <pre>
+    <%= inspect @params %>
+  </pre>
+</code>
+
+<h2>Examples</h2>
 <ol>
   <li>
     This is a search form that uses a `Plug.Conn` (`@conn`) as the first
